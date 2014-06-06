@@ -1872,6 +1872,8 @@ function Mouse(canvas) {
 	 */
 	this.buttons = [0, 0, 0];
 
+	this.touches = [];
+
 	var self = this;
 	canvas.addEventListener("mousedown", function(event) {
 		var m = relMouseCoords(canvas, event);
@@ -1885,15 +1887,30 @@ function Mouse(canvas) {
 		self.y = m.y;
 		self.buttons[event.button] = 0;
 	});
-	canvas.addEventListener("touchstart", function(event) {
-		var touch = event.touches[0];
-		var m = relMouseCoords(canvas, touch);
+	canvas.addEventListener("mousemove", function(event) {
+		var m = relMouseCoords(canvas, event);
 		self.x = m.x;
 		self.y = m.y;
+	});
+	function updateTouches(event) {
+		self.touches = Array.prototype.map.call(event.touches, relMouseCoords.bind(undefined, canvas));
+		if (self.touches.length > 0) {
+			self.x = self.touches[0].x;
+			self.y = self.touches[0].y;
+		}
+	}
+	canvas.addEventListener("touchstart", function(event) {
+		updateTouches(event);
 		self.buttons[0] = 2;
 	});
-	canvas.addEventListener("touchend", function() {
-		self.buttons[0] = 0;
+	canvas.addEventListener("touchend", function(event) {
+		updateTouches(event);
+		if (self.touches.length === 0) {
+			self.buttons[0] = 0;
+		}
+	});
+	canvas.addEventListener("touchmove", function(event) {
+		updateTouches(event);
 	});
 }
 /**
