@@ -1,6 +1,6 @@
 /*
 
-Splat 0.1.2
+Splat 0.1.3
 Copyright (c) 2014 Eric Lathrop
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -130,7 +130,6 @@ module.exports = AnimatedEntity;
 },{"./entity":9}],3:[function(_dereq_,module,exports){
 "use strict";
 
-
 var buffer = _dereq_("./buffer");
 
 /**
@@ -187,13 +186,17 @@ Animation.prototype.copy = function() {
 	anim.height = this.height;
 	return anim;
 };
+
 /**
  * Add a frame to the animation.
  * @param {external:canvas|external:image} img The image to draw for the frame being added.
  * @param {number} time How long, in milliseconds, this frame should be displayed in the animation.
  */
 Animation.prototype.add = function(img, time) {
-	this.frames.push({img: img, time: time});
+	this.frames.push({
+		img: img,
+		time: time
+	});
 	if (this.frames.length === 1) {
 		this.width = img.width;
 		this.height = img.height;
