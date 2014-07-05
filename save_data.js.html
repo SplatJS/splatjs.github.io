@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: save_data.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: save_data.js</h1>
+
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+/**
+ * @namespace Splat.saveData
+ */
+
+var platform = require("./platform");
+
+function cookieGet(name) {
+	var value = "; " + document.cookie;
+	var parts = value.split("; " + name + "=");
+	if (parts.length === 2) {
+		return parts.pop().split(";").shift();
+	} else {
+		throw "cookie " + name + " was not found";
+	}
+}
+
+function cookieSet(name, value) {
+	var expire = new Date();
+	expire.setTime(expire.getTime() + 1000 * 60 * 60 * 24 * 365);
+	var cookie = name + "=" + value + "; expires=" + expire.toUTCString() + ";";
+	document.cookie = cookie;
+}
+
+function getMultiple(getSingleFunc, keys, callback) {
+	if (typeof keys === "string") {
+		keys = [keys];
+	}
+
+	try
+	{
+		var data = keys.map(function(key) {
+			return [key, getSingleFunc(key)];
+		}).reduce(function(accum, pair) {
+			accum[pair[0]] = pair[1];
+			return accum;
+		}, {});
+
+		callback(undefined, data);
+	}
+	catch (e) {
+		callback(e);
+	}
+}
+
+function setMultiple(setSingleFunc, data, callback) {
+	try {
+		for (var key in data) {
+			if (data.hasOwnProperty(key)) {
+				setSingleFunc(key, data[key]);
+			}
+		}
+		callback();
+	}
+	catch (e) {
+		callback(e);
+	}
+}
+
+var cookieSaveData = {
+	"get": getMultiple.bind(undefined, cookieGet),
+	"set": setMultiple.bind(undefined, cookieSet)
+};
+
+function localStorageGet(name) {
+	return window.localStorage.getItem(name);
+}
+
+function localStorageSet(name, value) {
+	window.localStorage.setItem(name, value.toString());
+}
+
+var localStorageSaveData = {
+	"get": getMultiple.bind(undefined, localStorageGet),
+	"set": setMultiple.bind(undefined, localStorageSet)
+};
+
+/**
+ * A function that is called when save data has finished being retrieved.
+ * @callback saveDataGetFinished
+ * @param {error} err If defined, err is the error that occurred when retrieving the data.
+ * @param {object} data The key-value pairs of data that were previously saved.
+ */
+/**
+ * Retrieve data previously stored with {@link Splat.saveData.set}.
+ * @alias Splat.saveData.get
+ * @param {string | Array} keys A single key or array of key names of data items to retrieve.
+ * @param {saveDataGetFinished} callback A callback that is called with the data when it has been retrieved.
+ */
+function chromeStorageGet(keys, callback) {
+	window.chrome.storage.sync.get(keys, function(data) {
+		if (window.chrome.runtime.lastError) {
+			callback(window.chrome.runtime.lastError);
+		} else {
+			callback(undefined, data);
+		}
+	});
+}
+
+/**
+ * A function that is called when save data has finished being stored.
+ * @callback saveDataSetFinished
+ * @param {error} err If defined, err is the error that occurred when saving the data.
+ */
+/**
+ * Store data for later.
+ * @alias Splat.saveData.set
+ * @param {object} data An object containing key-value pairs of data to save.
+ * @param {saveDataSetFinished} callback A callback that is called when the data has finished saving.
+ */
+function chromeStorageSet(data, callback) {
+	window.chrome.storage.sync.set(data, function() {
+		callback(window.chrome.runtime.lastError);
+	});
+}
+
+var chromeStorageSaveData = {
+	"get": chromeStorageGet,
+	"set": chromeStorageSet,
+};
+
+if (platform.isChromeApp()) {
+	module.exports = chromeStorageSaveData;
+} else if (window.localStorage) {
+	module.exports = localStorageSaveData;
+} else {
+	module.exports = cookieSaveData;
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Fri Jul 04 2014 20:40:39 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
