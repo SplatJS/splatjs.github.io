@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: External: CanvasRenderingContext2D</title>
+    <title>JSDoc: Source: ads.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,98 +17,50 @@
 
 <div id="main">
 
-    <h1 class="page-title">External: CanvasRenderingContext2D</h1>
+    <h1 class="page-title">Source: ads.js</h1>
 
     
 
 
-
-<section>
-
-<header>
-    <h2>
-    CanvasRenderingContext2D
-    </h2>
     
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+/**
+ * @namespace Splat.ads
+ */
 
-<article>
-    <div class="container-overview">
-    
+var platform = require("./platform");
 
-    
-        
-            <div class="description">The built-in 2D rendering context for the drawing surface of a <a href="external-canvas.html">external:canvas</a>.</div>
-        
-
-        
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="external.jsdoc.html">external.jsdoc</a>, <a href="external.jsdoc.html#line15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D at the Mozilla Developer Network</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+if (platform.isEjecta()) {
+	var adBanner = new window.Ejecta.AdBanner();
+	module.exports = {
+		/**
+		 * Show an advertisement.
+		 * @alias Splat.ads.show
+		 * @param {boolean} isAtBottom true if the ads should be shown at the bottom of the screen. false if it should be shown at the top
+		 */
+		"show": function(isAtBottom) {
+			adBanner.isAtBottom = isAtBottom;
+			adBanner.show();
+		},
+		/**
+		 * Hide the current advertisement.
+		 * @alias Splat.ads.hide
+		 */
+		"hide": function() {
+			adBanner.hide();
+		}
+	};
+} else {
+	module.exports = {
+		"show": function() {},
+		"hide": function() {}
+	};
+}
+</code></pre>
+        </article>
+    </section>
 
 
 
