@@ -1,6 +1,6 @@
 /*
 
-Splat 1.1.0
+Splat 1.1.1
 Copyright (c) 2014 Eric Lathrop
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,7 +98,7 @@ if (platform.isEjecta()) {
 		/**
 		 * Show an advertisement.
 		 * @alias Splat.ads.show
-		 * @param {boolean} isAtBottom true if the ads should be shown at the bottom of the screen. false if it should be shown at the top
+		 * @param {boolean} isAtBottom true if the ad should be shown at the bottom of the screen. false if it should be shown at the top.
 		 */
 		"show": function(isAtBottom) {
 			adBanner.isAtBottom = isAtBottom;
@@ -112,12 +112,12 @@ if (platform.isEjecta()) {
 			adBanner.hide();
 		},
 		/**
-		 * The width of the ads that will show
+		 * The width of the ad that will show.
 		 * @alias Splat.ads#width
 		 */
 		"width": size.width,
 		/**
-		 * The height of the ads that will show
+		 * The height of the ad that will show.
 		 * @alias Splat.ads#height
 		 */
 		"height": size.height
