@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: main.js</title>
+    <title>JSDoc: Source: openUrl.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: main.js</h1>
+    <h1 class="page-title">Source: openUrl.js</h1>
 
     
 
@@ -27,31 +27,22 @@
         <article>
             <pre class="prettyprint source linenums"><code>"use strict";
 
-var buffer = require("./buffer");
+var platform = require("./platform");
 
 /**
- * @namespace Splat
+ * Open a url in a new window.
+ * @alias Splat.openUrl
+ * @param {string} url The url to open in a new window.
  */
-module.exports = {
-	makeBuffer: buffer.makeBuffer,
-	flipBufferHorizontally: buffer.flipBufferHorizontally,
-	flipBufferVertically: buffer.flipBufferVertically,
-
-	ads: require("./ads"),
-	AnimatedEntity: require("./animated_entity"),
-	AStar: require("./astar"),
-	BinaryHeap: require("./binary_heap"),
-	Camera: require("./camera"),
-	Entity: require("./entity"),
-	EntityBoxCamera: require("./entity_box_camera"),
-	Game: require("./game"),
-	math: require("./math"),
-	openUrl: require("./openUrl"),
-	NinePatch: require("./ninepatch"),
-	saveData: require("./save_data"),
-	Scene: require("./scene"),
-	Timer: require("./timer"),
+module.exports = function(url) {
+	window.open(url);
 };
+
+if (platform.isEjecta()) {
+	module.exports = function(url) {
+		window.ejecta.openURL(url);
+	};
+}
 </code></pre>
         </article>
     </section>
