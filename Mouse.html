@@ -619,7 +619,7 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line206">line 206</a>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line214">line 214</a>
     </li></ul></dd>
     
 
@@ -667,7 +667,7 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
         
             
 <dt>
-    <h4 class="name" id="isPressed"><span class="type-signature"></span>isPressed<span class="signature">(button)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <h4 class="name" id="isPressed"><span class="type-signature"></span>isPressed<span class="signature">(button, x<span class="signature-attributes">opt</span>, y<span class="signature-attributes">opt</span>, width<span class="signature-attributes">opt</span>, height<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
 </dt>
@@ -697,6 +697,8 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -722,10 +724,150 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last">The button number to test. Button 0 is typically the left mouse button, as well as the first touch location.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The left edge of a rectangle to restrict the test to. If the mouse position is outside of this rectangle, the button will not be considered pressed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The top edge of a rectangle to restrict the test to. If the mouse position is outside of this rectangle, the button will not be considered pressed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The width of a rectangle to restrict the test to. If the mouse position is outside of this rectangle, the button will not be considered pressed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The height of a rectangle to restrict the test to. If the mouse position is outside of this rectangle, the button will not be considered pressed.</td>
         </tr>
 
     
@@ -756,7 +898,7 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line193">line 193</a>
+        <a href="mouse.js.html">mouse.js</a>, <a href="mouse.js.html#line197">line 197</a>
     </li></ul></dd>
     
 
@@ -912,7 +1054,7 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha8</a> on Sun Jul 06 2014 15:49:10 GMT-0400 (Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha8</a> on Sat Jul 19 2014 15:46:00 GMT-0400 (Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
