@@ -336,7 +336,7 @@ Animation.prototype.flipVertically = function() {
 	return this;
 };
 /**
- * Rotate all frames in the Animation clockwise by 90 degrees. 
+ * Rotate all frames in the Animation clockwise by 90 degrees.
  * @return {Animation} The Animation, so you can chain calls to rotate/flip methods.
  */
 Animation.prototype.rotateClockwise = function() {
@@ -433,6 +433,15 @@ function makeAnimationFromManifest(images, key, manifestEntry) {
 	if (manifestEntry.flip === "vertical") {
 		animation.flipVertically();
 	}
+	if (manifestEntry.rotate === "cw") {
+		animation.rotateClockwise();
+	}
+	if (manifestEntry.rotate === "180") {
+		animation.rotateClockwise().rotateClockwise();
+	}
+	if (manifestEntry.rotate === "ccw") {
+		animation.rotateCounterclockwise();
+	}
 	animation.name = key;
 	return animation;
 }
@@ -473,6 +482,7 @@ function generateAnimationsFromManifest(images, manifest) {
 			"frames": 10, // Load 10 separate image files [0-9].
 			"msPerFrame": 100,
 			"repeatAt": 5, // Loop the animation back at frame 5.
+			"rotate": "cw" // Rotate the animation clockwise.
 		}
 	};
 	var imageLoader = new Splat.ImageLoader();
