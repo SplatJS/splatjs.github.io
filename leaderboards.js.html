@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Random</title>
+    <title>JSDoc: Source: leaderboards.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,196 +17,93 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Random</h1>
+    <h1 class="page-title">Source: leaderboards.js</h1>
 
     
 
 
-
-<section>
-
-<header>
-    <h2>
-        <span class="ancestors"><a href="Splat.html">Splat</a><a href="Splat.math.html">.math</a>.</span>
     
-    Random
-    </h2>
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+/**
+ * @namespace Splat.leaderboards
+ */
 
-<article>
-    <div class="container-overview">
-    
+var platform = require("./platform");
 
-    
-        
-<dt>
-    <h4 class="name" id="Random"><span class="type-signature"></span>new Random<span class="signature">(seed<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+if (platform.isEjecta()) {
+	var gameCenter = new window.Ejecta.GameCenter();
+	gameCenter.softAuthenticate();
 
-    
-</dt>
-<dd>
+	var authFirst = function(action) {
+		if (gameCenter.authed) {
+			action();
+		} else {
+			gameCenter.authenticate(function(err) {
+				if (err) {
+					return;
+				}
+				action();
+			});
+		}
+	};
 
-    
-    <div class="description">
-        A seedable pseudo-random number generator. Currently a Mersenne Twister PRNG.
-    </div>
-    
+	module.exports = {
+		/**
+		 * Report that an achievement was achieved.
+		 * @alias Splat.leaderboards.reportAchievement
+		 * @param {string} id The name of the achievement.
+		 * @param {int} percent The percentage of the achievement that is completed in the range of 0-100.
+		 */
+		"reportAchievement": function(id, percent) {
+			authFirst(function() {
+				gameCenter.reportAchievement(id, percent);
+			});
+		},
+		/**
+		 * Report that a score was achieved on a leaderboard.
+		 * @alias Splat.leaderboards.reportScore
+		 * @param {string} leaderboard The name of the leaderboard the score is on.
+		 * @param {int} score The score that was achieved.
+		 */
+		"reportScore": function(leaderboard, score) {
+			authFirst(function() {
+				gameCenter.reportScore(leaderboard, score);
+			});
+		},
+		/**
+		 * Show the achievements screen.
+		 * @alias Splat.leaderboards.showAchievements
+		 */
+		"showAchievements": function() {
+			authFirst(function() {
+				gameCenter.showAchievements();
+			});
+		},
+		/**
+		 * Show a leaderboard screen.
+		 * @alias Splat.leaderboards.showLeaderboard
+		 * @param {string} name The name of the leaderboard to show.
+		 */
+		"showLeaderboard": function(name) {
+			authFirst(function() {
+				gameCenter.showLeaderboard(name);
+			});
+		}
+	};
+} else {
+	module.exports = {
+		"reportAchievement": function() {},
+		"reportScore": function() {},
+		"showAchievements": function() {},
+		"showLeaderboard": function() {}
+	};
+}
 
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>seed</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The seed for the PRNG.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-    
-
-    
-<dl class="details">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="math.js.html">math.js</a>, <a href="math.js.html#line35">line 35</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://github.com/boo1ean/mersenne-twister">mersenne-twister package at github</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h5>Example</h5>
-        
-    <pre class="prettyprint"><code>var rand = new Splat.math.Random(123);
-var val = rand.random();</code></pre>
-
-    
-</dd>
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+</code></pre>
+        </article>
+    </section>
 
 
 
