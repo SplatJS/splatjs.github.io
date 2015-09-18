@@ -23,43 +23,47 @@
 
 
 
+
 <section>
 
 <header>
-    <h2>
-        <span class="ancestors"><a href="Splat.html">Splat</a>.</span>
     
-    AStar
-    </h2>
+        <h2>
+            <span class="ancestors"><a href="Splat.html">Splat</a>.</span>
+        
+        AStar
+        </h2>
+        
     
 </header>
 
 <article>
     <div class="container-overview">
     
+        
 
     
-        
-<dt>
+
     <h4 class="name" id="AStar"><span class="type-signature"></span>new AStar<span class="signature">(isWalkable)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Implements the <a href="http://en.wikipedia.org/wiki/A*_search_algorithm">A* pathfinding algorithm</a> on a 2-dimensional grid. You can use this to find a path between a source and destination coordinate while avoiding obstacles.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Implements the <a href="http://en.wikipedia.org/wiki/A*_search_algorithm">A* pathfinding algorithm</a> on a 2-dimensional grid. You can use this to find a path between a source and destination coordinate while avoiding obstacles.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -105,10 +109,20 @@
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -142,20 +156,19 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
     
     </div>
@@ -166,7 +179,7 @@
 
     
 
-    
+     
 
     
 
@@ -175,28 +188,31 @@
     
         <h3 class="subsection-title">Methods</h3>
 
-        <dl>
+        
             
-<dt>
+
+    
+
     <h4 class="name" id="heuristic"><span class="type-signature"></span>heuristic<span class="signature">(x, y)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        The <a href="http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html">A* heuristic</a>, commonly referred to as h(x), that estimates how far a location is from the destination. This implementation is the <a href="http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html#manhattan-distance">Manhattan method</a>, which is good for situations when the entity can travel in four directions. Feel free to replace this with a different heuristic implementation.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    The <a href="http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html">A* heuristic</a>, commonly referred to as h(x), that estimates how far a location is from the destination. This implementation is the <a href="http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html#manhattan-distance">Manhattan method</a>, which is good for situations when the entity can travel in four directions. Feel free to replace this with a different heuristic implementation.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -265,10 +281,20 @@
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -302,43 +328,45 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="search"><span class="type-signature"></span>search<span class="signature">(srcX, srcY, destX, destY)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Search for an optimal path between srcX, srcY and destX, destY, while avoiding obstacles.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Search for an optimal path between srcX, srcY and destX, destY, while avoiding obstacles.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -453,10 +481,20 @@
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -490,20 +528,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 <div class="param-desc">
     The optimal path, in the form of an array of objects that each have an x and y property.
 </div>
@@ -522,12 +560,11 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
 
-        </dl>
+
+
+        
     
 
     
@@ -543,13 +580,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.ads.html">ads</a></li><li><a href="Splat.leaderboards.html">leaderboards</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.ads.html">ads</a></li><li><a href="Splat.leaderboards.html">leaderboards</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
-<br clear="both">
+<br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Mon Dec 08 2014 16:34:23 GMT-0500 (EST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Sep 17 2015 23:22:42 GMT-0400 (EDT)
 </footer>
 
 <script> prettyPrint(); </script>

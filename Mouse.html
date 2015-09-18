@@ -23,31 +23,33 @@
 
 
 
+
 <section>
 
 <header>
-    <h2>
-    Mouse
-    </h2>
+    
+        <h2>
+        Mouse
+        </h2>
+        
     
 </header>
 
 <article>
     <div class="container-overview">
     
+        
 
     
-        
-<dt>
+
     <h4 class="name" id="Mouse"><span class="type-signature"></span>new Mouse<span class="signature">(canvas)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Mouse and touch input handling. An instance of Mouse is available as <a href="Splat.Game.html#mouse">Splat.Game#mouse</a>.
+
+
+<div class="description">
+    Mouse and touch input handling. An instance of Mouse is available as <a href="Splat.Game.html#mouse">Splat.Game#mouse</a>.
 
 The first touch will emulates a mouse press with button 0.
 This means you can use the mouse (<a href="Mouse.html#isPressed">Mouse#isPressed</a>/<a href="Mouse.html#consumePressed">Mouse#consumePressed</a>) APIs and your game will work on touch screens (as long as you only need the left button.
@@ -55,16 +57,18 @@ This means you can use the mouse (<a href="Mouse.html#isPressed">Mouse#isPressed
 A mouse press will emulate a touch if the device does not support touch.
 This means you can use <a href="Mouse.html#touches">Mouse#touches</a>, and your game will still work on a PC with a mouse.
 Also, if you call <a href="Mouse.html#consumePressed">Mouse#consumePressed</a> with button 0, it will add a `consumed:true` field to all current touches. This will help you prevent processing a touch multiple times.
-    </div>
-    
+</div>
 
-    
 
-    
 
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -110,10 +114,20 @@ Also, if you call <a href="Mouse.html#consumePressed">Mouse#consumePressed</a> w
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -147,20 +161,19 @@ Also, if you call <a href="Mouse.html#consumePressed">Mouse#consumePressed</a> w
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
     
     </div>
@@ -171,42 +184,49 @@ Also, if you call <a href="Mouse.html#consumePressed">Mouse#consumePressed</a> w
 
     
 
-    
+     
 
     
 
     
         <h3 class="subsection-title">Members</h3>
 
-        <dl>
+        
             
-<dt>
-    <h4 class="name" id="onmouseup"><span class="type-signature"></span>onmouseup<span class="type-signature"> :<a href="global.html#onmouseupHandler">onmouseupHandler</a></span></h4>
+<h4 class="name" id="onmouseup"><span class="type-signature"></span>onmouseup<span class="type-signature"> :<a href="global.html#onmouseupHandler">onmouseupHandler</a></span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        A function that will be called when a mouse button is released, or a touch has stopped.
-This is useful for opening a URL with <a href="Splat.html#openUrl">Splat.openUrl</a> to avoid popup blockers.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    A function that will be called when a mouse button is released, or a touch has stopped.
+This is useful for opening a URL with <a href="Splat.html#.openUrl">Splat.openUrl</a> to avoid popup blockers.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type"><a href="global.html#onmouseupHandler">onmouseupHandler</a></span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -240,39 +260,45 @@ This is useful for opening a URL with <a href="Splat.html#openUrl">Splat.openUrl
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="touches"><span class="type-signature"></span>touches<span class="type-signature"> :Array</span></h4>
+<h4 class="name" id="touches"><span class="type-signature"></span>touches<span class="type-signature"> :Array</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        An array of the current touches on a touch screen device. Each touch has a `x`, `y`, and `id` field.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    An array of the current touches on a touch screen device. Each touch has a `x`, `y`, and `id` field.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">Array</span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -306,39 +332,45 @@ This is useful for opening a URL with <a href="Splat.html#openUrl">Splat.openUrl
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="x"><span class="type-signature"></span>x<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="x"><span class="type-signature"></span>x<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The x coordinate of the cursor relative to the left side of the canvas.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The x coordinate of the cursor relative to the left side of the canvas.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -372,39 +404,45 @@ This is useful for opening a URL with <a href="Splat.html#openUrl">Splat.openUrl
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="y"><span class="type-signature"></span>y<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="y"><span class="type-signature"></span>y<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The y coordinate of the cursor relative to the top of the canvas.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The y coordinate of the cursor relative to the top of the canvas.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -438,40 +476,42 @@ This is useful for opening a URL with <a href="Splat.html#openUrl">Splat.openUrl
 </dl>
 
 
-    
 
-    
-</dd>
 
-        </dl>
+
+
+        
     
 
     
         <h3 class="subsection-title">Methods</h3>
 
-        <dl>
-            
-<dt>
-    <h4 class="name" id="consumePressed"><span class="type-signature"></span>consumePressed<span class="signature">(button, <span class="optional">x</span>, <span class="optional">y</span>, <span class="optional">width</span>, <span class="optional">height</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Test if a mouse button is currently pressed, and was newly pressed down since the last call to consumePressed.
-If you call this with button 0, it will add a `consumed:true` field to all current touches. This will help you prevent processing a touch multiple times.
-    </div>
-    
-
-    
-
-    
-
-    
-        <h5>Parameters:</h5>
         
+            
+
+    
+
+    <h4 class="name" id="consumePressed"><span class="type-signature"></span>consumePressed<span class="signature">(button, x<span class="signature-attributes">opt</span>, y<span class="signature-attributes">opt</span>, width<span class="signature-attributes">opt</span>, height<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Test if a mouse button is currently pressed, and was newly pressed down since the last call to consumePressed.
+If you call this with button 0, it will add a `consumed:true` field to all current touches. This will help you prevent processing a touch multiple times.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
 
 <table class="params">
     <thead>
@@ -483,7 +523,7 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -659,10 +699,20 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -696,20 +746,20 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -724,33 +774,35 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="isPressed"><span class="type-signature"></span>isPressed<span class="signature">(button, <span class="optional">x</span>, <span class="optional">y</span>, <span class="optional">width</span>, <span class="optional">height</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
-
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Test if a mouse button is currently pressed.
-    </div>
-    
 
     
 
-    
+    <h4 class="name" id="isPressed"><span class="type-signature"></span>isPressed<span class="signature">(button, x<span class="signature-attributes">opt</span>, y<span class="signature-attributes">opt</span>, width<span class="signature-attributes">opt</span>, height<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-        <h5>Parameters:</h5>
-        
+
+
+
+<div class="description">
+    Test if a mouse button is currently pressed.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
 
 <table class="params">
     <thead>
@@ -762,7 +814,7 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -938,10 +990,20 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -975,20 +1037,20 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1003,34 +1065,45 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="supportsTouch"><span class="type-signature"></span>supportsTouch<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test whether the device supports touch events. This is useful to customize messages to say either "click" or "tap".
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test whether the device supports touch events. This is useful to customize messages to say either "click" or "tap".
+</div>
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
 <dl class="details">
+
+    
+
+    
+
+    
+
     
 
     
@@ -1064,20 +1137,20 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1092,12 +1165,11 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
     </dd>
 </dl>
 
-        
-
     
-</dd>
 
-        </dl>
+
+
+        
     
 
     
@@ -1113,13 +1185,13 @@ If you call this with button 0, it will add a `consumed:true` field to all curre
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.ads.html">ads</a></li><li><a href="Splat.leaderboards.html">leaderboards</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.ads.html">ads</a></li><li><a href="Splat.leaderboards.html">leaderboards</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
-<br clear="both">
+<br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Mon Dec 08 2014 16:34:23 GMT-0500 (EST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Sep 17 2015 23:22:42 GMT-0400 (EDT)
 </footer>
 
 <script> prettyPrint(); </script>

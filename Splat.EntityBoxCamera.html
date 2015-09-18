@@ -23,43 +23,47 @@
 
 
 
+
 <section>
 
 <header>
-    <h2>
-        <span class="ancestors"><a href="Splat.html">Splat</a>.</span>
     
-    EntityBoxCamera
-    </h2>
+        <h2>
+            <span class="ancestors"><a href="Splat.html">Splat</a>.</span>
+        
+        EntityBoxCamera
+        </h2>
+        
     
 </header>
 
 <article>
     <div class="container-overview">
     
+        
 
     
-        
-<dt>
+
     <h4 class="name" id="EntityBoxCamera"><span class="type-signature"></span>new EntityBoxCamera<span class="signature">(entity, width, height, screenCenterX, screenCenterY)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        A <a href="Splat.Camera.html">Splat.Camera</a> that tracks an <a href="Splat.Entity.html">Splat.Entity</a> to keep it on screen within an invisible box. If the Entity moves outside of the invisible box, the camera is adjusted the minimal amount so that the Entity is back inside the box.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    A <a href="Splat.Camera.html">Splat.Camera</a> that tracks an <a href="Splat.Entity.html">Splat.Entity</a> to keep it on screen within an invisible box. If the Entity moves outside of the invisible box, the camera is adjusted the minimal amount so that the Entity is back inside the box.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -197,10 +201,20 @@
     
     </tbody>
 </table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -234,21 +248,21 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
+
+
+
+
+
+
+
+    <h5>Example</h5>
     
-        <h5>Example</h5>
-        
     <pre class="prettyprint"><code>var scene = new Splat.Scene(canvas, function() {
 	// initialization
 	this.player = new Splat.Entity(200, 200, 50, 50);
@@ -260,8 +274,7 @@
 	// draw
 });</code></pre>
 
-    
-</dd>
+
 
     
     </div>
@@ -269,50 +282,62 @@
     
         <h3 class="subsection-title">Extends</h3>
 
-        <ul>
-            <li><a href="Splat.Entity.html">Splat.Entity</a></li>
-        </ul>
-    
+        
+
+
+    <ul>
+        <li><a href="Splat.Entity.html">Splat.Entity</a></li>
+    </ul>
+
 
     
 
     
 
     
+
+     
 
     
 
     
         <h3 class="subsection-title">Members</h3>
 
-        <dl>
+        
             
-<dt>
-    <h4 class="name" id="entity"><span class="type-signature"></span>entity<span class="type-signature"> :<a href="Splat.Entity.html">Splat.Entity</a></span></h4>
+<h4 class="name" id="entity"><span class="type-signature"></span>entity<span class="type-signature"> :<a href="Splat.Entity.html">Splat.Entity</a></span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The <a href="Splat.Entity.html">Splat.Entity</a> for the camera to track.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The <a href="Splat.Entity.html">Splat.Entity</a> for the camera to track.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type"><a href="Splat.Entity.html">Splat.Entity</a></span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -346,40 +371,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="height"><span class="type-signature"></span>height<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="height"><span class="type-signature"></span>height<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Height of the Entity, extending downward from <a href="Splat.Entity.html#y">Splat.Entity#y</a>.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    Height of the Entity, extending downward from <a href="Splat.Entity.html#y">Splat.Entity#y</a>.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -389,7 +412,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#height">Splat.Entity#height</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -417,40 +448,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="lastX"><span class="type-signature">&lt;readonly> </span>lastX<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="lastX"><span class="type-signature">(readonly) </span>lastX<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The value of <a href="Splat.Entity.html#x">Splat.Entity#x</a> in the previous frame.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The value of <a href="Splat.Entity.html#x">Splat.Entity#x</a> in the previous frame.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -460,7 +489,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#lastX">Splat.Entity#lastX</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -488,40 +525,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="lastY"><span class="type-signature">&lt;readonly> </span>lastY<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="lastY"><span class="type-signature">(readonly) </span>lastY<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The value of <a href="Splat.Entity.html#y">Splat.Entity#y</a> in the previous frame.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The value of <a href="Splat.Entity.html#y">Splat.Entity#y</a> in the previous frame.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -531,7 +566,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#lastY">Splat.Entity#lastY</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -559,39 +602,45 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="screenCenterX"><span class="type-signature"></span>screenCenterX<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="screenCenterX"><span class="type-signature"></span>screenCenterX<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The center of the invisible box on the screen along the x axis.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The center of the invisible box on the screen along the x axis.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -625,39 +674,45 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="screenCenterY"><span class="type-signature"></span>screenCenterY<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="screenCenterY"><span class="type-signature"></span>screenCenterY<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        The center of the invisible box on the screen along the y axis.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    The center of the invisible box on the screen along the y axis.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
     
 
     
-<dl class="details">
+
+    
+
     
 
     
@@ -691,40 +746,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="vx"><span class="type-signature"></span>vx<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="vx"><span class="type-signature"></span>vx<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Velocity along the x-axis in pixels/millisecond.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    Velocity along the x-axis in pixels/millisecond.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -734,7 +787,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#vx">Splat.Entity#vx</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -762,40 +823,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="vy"><span class="type-signature"></span>vy<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="vy"><span class="type-signature"></span>vy<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Velocity along the y-axis in pixels/millisecond.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    Velocity along the y-axis in pixels/millisecond.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -805,7 +864,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#vy">Splat.Entity#vy</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -833,40 +900,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="width"><span class="type-signature"></span>width<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="width"><span class="type-signature"></span>width<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Width of the Entity, extending to the right of <a href="Splat.Entity.html#x">Splat.Entity#x</a>.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    Width of the Entity, extending to the right of <a href="Splat.Entity.html#x">Splat.Entity#x</a>.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -876,7 +941,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#width">Splat.Entity#width</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -904,40 +977,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="x"><span class="type-signature"></span>x<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="x"><span class="type-signature"></span>x<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Leftmost position along the x-axis.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    Leftmost position along the x-axis.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -947,7 +1018,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#x">Splat.Entity#x</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -975,40 +1054,38 @@
 </dl>
 
 
-    
 
-    
-</dd>
+
+
 
         
             
-<dt>
-    <h4 class="name" id="y"><span class="type-signature"></span>y<span class="type-signature"> :number</span></h4>
+<h4 class="name" id="y"><span class="type-signature"></span>y<span class="type-signature"> :number</span></h4>
 
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Topmost position along the y-axis.
-    </div>
-    
 
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
+
+
+<div class="description">
+    Topmost position along the y-axis.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
 <span class="param-type">number</span>
 
 
-            </li>
-        </ul>
-    
+        </li>
+    </ul>
 
-    
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1018,7 +1095,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#y">Splat.Entity#y</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1046,39 +1131,41 @@
 </dl>
 
 
-    
 
-    
-</dd>
 
-        </dl>
+
+
+        
     
 
     
         <h3 class="subsection-title">Methods</h3>
 
-        <dl>
+        
             
-<dt>
+
+    
+
     <h4 class="name" id="collides"><span class="type-signature"></span>collides<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity is currently colliding with another.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity is currently colliding with another.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -1124,11 +1211,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1138,7 +1227,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#collides">Splat.Entity#collides</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1166,20 +1263,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1194,33 +1291,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="didOverlapHoriz"><span class="type-signature"></span>didOverlapHoriz<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity horizontally overlapped another in the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity horizontally overlapped another in the previous frame.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -1266,11 +1365,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1280,7 +1381,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#didOverlapHoriz">Splat.Entity#didOverlapHoriz</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1308,20 +1417,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1336,33 +1445,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="didOverlapVert"><span class="type-signature"></span>didOverlapVert<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity vertically overlapped another in the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity vertically overlapped another in the previous frame.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -1408,11 +1519,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1422,7 +1535,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#didOverlapVert">Splat.Entity#didOverlapVert</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1450,20 +1571,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1478,33 +1599,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="getCollisions"><span class="type-signature"></span>getCollisions<span class="signature">(entities)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Return a list of all Entities that collide with this Entity.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Return a list of all Entities that collide with this Entity.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -1550,11 +1673,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1564,7 +1689,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#getCollisions">Splat.Entity#getCollisions</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1592,20 +1725,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 <div class="param-desc">
     A list of entities that collide with this Entity.
 </div>
@@ -1624,34 +1757,50 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="move"><span class="type-signature"></span>move<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Adjust the camera so that it keeps <a href="Splat.EntityBoxCamera.html#entity">Splat.EntityBoxCamera#entity</a> within the invisible box. This is usually automatically called by the <a href="Splat.Scene.html">Splat.Scene</a> for you.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Adjust the camera so that it keeps <a href="Splat.EntityBoxCamera.html#entity">Splat.EntityBoxCamera#entity</a> within the invisible box. This is usually automatically called by the <a href="Splat.Scene.html">Splat.Scene</a> for you.
+</div>
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
 <dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Splat.Entity.html#move">Splat.Entity#move</a>
+    </li></ul></dd>
     
 
     
@@ -1685,45 +1834,48 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="moved"><span class="type-signature"></span>moved<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity has changed position since the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity has changed position since the previous frame.
+</div>
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1733,7 +1885,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#moved">Splat.Entity#moved</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1761,20 +1921,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1789,33 +1949,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="overlapsHoriz"><span class="type-signature"></span>overlapsHoriz<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity horizontally overlaps another.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity horizontally overlaps another.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -1861,11 +2023,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -1875,7 +2039,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#overlapsHoriz">Splat.Entity#overlapsHoriz</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1903,20 +2075,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -1931,33 +2103,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="overlapsVert"><span class="type-signature"></span>overlapsVert<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity vertically overlaps another.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity vertically overlaps another.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2003,11 +2177,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2017,7 +2193,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#overlapsVert">Splat.Entity#overlapsVert</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2045,20 +2229,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -2073,34 +2257,36 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="resolveBottomCollisionWith"><span class="type-signature"></span>resolveBottomCollisionWith<span class="signature">(other)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Adjust the Entity's position so its bottom edge does not penetrate the other Entity's top edge.
+
+
+<div class="description">
+    Adjust the Entity's position so its bottom edge does not penetrate the other Entity's top edge.
 <a href="Splat.Entity.html#vy">Splat.Entity#vy</a> is also zeroed.
-    </div>
-    
+</div>
 
-    
 
-    
 
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2146,11 +2332,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2160,7 +2348,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#resolveBottomCollisionWith">Splat.Entity#resolveBottomCollisionWith</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2188,44 +2384,46 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="resolveCollisionWith"><span class="type-signature"></span>resolveCollisionWith<span class="signature">(other)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Adjust the Entity's position so it does not penetrate the other Entity.
+
+
+<div class="description">
+    Adjust the Entity's position so it does not penetrate the other Entity.
 <a href="Splat.Entity.html#vx">Splat.Entity#vx</a> will be zeroed if <a href="Splat.Entity.html#x">Splat.Entity#x</a> was adjusted, and <a href="Splat.Entity.html#vy">Splat.Entity#vy</a> will be zeroed if <a href="Splat.Entity.html#y">Splat.Entity#y</a> was adjusted.
-    </div>
-    
+</div>
 
-    
 
-    
 
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2271,11 +2469,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2285,7 +2485,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#resolveCollisionWith">Splat.Entity#resolveCollisionWith</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2313,44 +2521,46 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="resolveLeftCollisionWith"><span class="type-signature"></span>resolveLeftCollisionWith<span class="signature">(other)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Adjust the Entity's position so its left edge does not penetrate the other Entity's right edge.
+
+
+<div class="description">
+    Adjust the Entity's position so its left edge does not penetrate the other Entity's right edge.
 <a href="Splat.Entity.html#vx">Splat.Entity#vx</a> is also zeroed.
-    </div>
-    
+</div>
 
-    
 
-    
 
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2396,11 +2606,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2410,7 +2622,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#resolveLeftCollisionWith">Splat.Entity#resolveLeftCollisionWith</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2438,44 +2658,46 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="resolveRightCollisionWith"><span class="type-signature"></span>resolveRightCollisionWith<span class="signature">(other)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Adjust the Entity's position so its right edge does not penetrate the other Entity's left edge.
+
+
+<div class="description">
+    Adjust the Entity's position so its right edge does not penetrate the other Entity's left edge.
 <a href="Splat.Entity.html#vx">Splat.Entity#vx</a> is also zeroed.
-    </div>
-    
+</div>
 
-    
 
-    
 
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2521,11 +2743,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2535,7 +2759,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#resolveRightCollisionWith">Splat.Entity#resolveRightCollisionWith</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2563,44 +2795,46 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="resolveTopCollisionWith"><span class="type-signature"></span>resolveTopCollisionWith<span class="signature">(other)</span><span class="type-signature"></span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Adjust the Entity's position so its top edge does not penetrate the other Entity's bottom edge.
+
+
+<div class="description">
+    Adjust the Entity's position so its top edge does not penetrate the other Entity's bottom edge.
 <a href="Splat.Entity.html#vy">Splat.Entity#vy</a> is also zeroed.
-    </div>
-    
+</div>
 
-    
 
-    
 
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2646,11 +2880,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2660,7 +2896,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#resolveTopCollisionWith">Splat.Entity#resolveTopCollisionWith</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2688,43 +2932,45 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="solveCollisions"><span class="type-signature"></span>solveCollisions<span class="signature">(entities)</span><span class="type-signature"> &rarr; {Array}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Detect and resolve collisions between this Entity and a list of other Entities
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Detect and resolve collisions between this Entity and a list of other Entities
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2770,11 +3016,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2784,7 +3032,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#solveCollisions">Splat.Entity#solveCollisions</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2812,20 +3068,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 <div class="param-desc">
     A list of entities that were involved in collisions.
 </div>
@@ -2844,33 +3100,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="wasAbove"><span class="type-signature"></span>wasAbove<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity was above another in the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity was above another in the previous frame.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -2916,11 +3174,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -2930,7 +3190,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#wasAbove">Splat.Entity#wasAbove</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2958,20 +3226,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -2986,33 +3254,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="wasBelow"><span class="type-signature"></span>wasBelow<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity was below another in the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity was below another in the previous frame.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -3058,11 +3328,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -3072,7 +3344,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#wasBelow">Splat.Entity#wasBelow</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -3100,20 +3380,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -3128,33 +3408,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="wasLeft"><span class="type-signature"></span>wasLeft<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity was to the left of another in the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity was to the left of another in the previous frame.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -3200,11 +3482,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -3214,7 +3498,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#wasLeft">Splat.Entity#wasLeft</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -3242,20 +3534,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -3270,33 +3562,35 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
+
+
 
         
             
-<dt>
+
+    
+
     <h4 class="name" id="wasRight"><span class="type-signature"></span>wasRight<span class="signature">(other)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
-</dt>
-<dd>
 
-    
-    <div class="description">
-        Test if this Entity was to the right of another in the previous frame.
-    </div>
-    
 
-    
 
-    
+<div class="description">
+    Test if this Entity was to the right of another in the previous frame.
+</div>
 
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
     
-        <h5>Parameters:</h5>
-        
 
 <table class="params">
     <thead>
@@ -3342,11 +3636,13 @@
     
     </tbody>
 </table>
-    
 
-    
+
+
+
+
+
 <dl class="details">
-    
 
     
 
@@ -3356,7 +3652,15 @@
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
         <a href="Splat.Entity.html#wasRight">Splat.Entity#wasRight</a>
-    </li></dd>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -3384,20 +3688,20 @@
 </dl>
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
-    <h5>Returns:</h5>
-    
-            
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -3412,12 +3716,11 @@
     </dd>
 </dl>
 
-        
-
     
-</dd>
 
-        </dl>
+
+
+        
     
 
     
@@ -3433,13 +3736,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.ads.html">ads</a></li><li><a href="Splat.leaderboards.html">leaderboards</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-buffer.html">buffer</a></li><li><a href="module-KeyMap.html">KeyMap</a></li></ul><h3>Externals</h3><ul><li><a href="external-AudioContext.html">AudioContext</a></li><li><a href="external-canvas.html">canvas</a></li><li><a href="external-CanvasRenderingContext2D.html">CanvasRenderingContext2D</a></li><li><a href="external-image.html">image</a></li></ul><h3>Classes</h3><ul><li><a href="Accelerometer.html">Accelerometer</a></li><li><a href="Animation.html">Animation</a></li><li><a href="AnimationLoader.html">AnimationLoader</a></li><li><a href="FontLoader.html">FontLoader</a></li><li><a href="ImageLoader.html">ImageLoader</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="SceneManager.html">SceneManager</a></li><li><a href="SoundLoader.html">SoundLoader</a></li><li><a href="Splat.AnimatedEntity.html">AnimatedEntity</a></li><li><a href="Splat.AStar.html">AStar</a></li><li><a href="Splat.BinaryHeap.html">BinaryHeap</a></li><li><a href="Splat.Camera.html">Camera</a></li><li><a href="Splat.Entity.html">Entity</a></li><li><a href="Splat.EntityBoxCamera.html">EntityBoxCamera</a></li><li><a href="Splat.Game.html">Game</a></li><li><a href="Splat.math.Random.html">Random</a></li><li><a href="Splat.NinePatch.html">NinePatch</a></li><li><a href="Splat.Scene.html">Scene</a></li><li><a href="Splat.Timer.html">Timer</a></li></ul><h3>Namespaces</h3><ul><li><a href="Splat.html">Splat</a></li><li><a href="Splat.ads.html">ads</a></li><li><a href="Splat.leaderboards.html">leaderboards</a></li><li><a href="Splat.math.html">math</a></li><li><a href="Splat.saveData.html">saveData</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
-<br clear="both">
+<br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha5</a> on Mon Dec 08 2014 16:34:23 GMT-0500 (EST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a> on Thu Sep 17 2015 23:22:43 GMT-0400 (EDT)
 </footer>
 
 <script> prettyPrint(); </script>
